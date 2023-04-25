@@ -15,3 +15,7 @@
 ![Image](addMessage2.png)
 
 - Very similar to the first implementation, but it seems to add to the ArrayList as it keeps the first phrase that we had inputted in the url while inputting the phrase I just put in right under the first in a new line.
+
+## **Part 2**
+### This is the buggy code that I had chose:
+`
