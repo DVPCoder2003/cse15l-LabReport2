@@ -25,7 +25,7 @@ static void reverseInPlace(int[] arr)
     }
   }
  ```
-##Here is an input that does induce a failure:
+## Here is an input that does induce a failure:
 ```
 @Test 
 public void testReverseInPlace2() {
@@ -36,7 +36,7 @@ public void testReverseInPlace2() {
 	}
 ```
 
-##Here is an input that doesn’t induce a failure
+## Here is an input that doesn’t induce a failure
 ```
 @Test 
 public void testReverseInPlace() {
@@ -45,3 +45,5 @@ public void testReverseInPlace() {
     assertArrayEquals(new int[]{ 3 }, input1);
 }
 ```
+### With the input that does not induce a failure, it passes through smoothly, but with the input that does, it brings up this error code on the terminal:
+![Image](bugSymptom.png)
