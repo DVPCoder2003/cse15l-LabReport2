@@ -16,6 +16,7 @@
 
 - Very similar to the first implementation, but it seems to add to the ArrayList as it keeps the first phrase that we had inputted in the url while inputting the phrase I just put in right under the first in a new line.
 
+--- 
 ## **Part 2**
 ## This is the buggy code that I had chose:
 ``` 
@@ -61,6 +62,7 @@ static void reverseInPlace(int[] arr) {
 ```
 - What had changed between the two codes was me adding a temporary variable to keep the first half of numbers stored somewhere when reversing the order of the array. The bug here was that it was only changing one half of the array and keeping the other the same number and order. For example, an array {1,2,3} through the method with bugs would give you {3,2,3} instead. With the new code, we make sure to only go through half of the array as we are going to change the other half already when reversing the array. Then you go through however many for loops, replacing the first with the last using the temp variable, the second with the second last etc.
 
+---
 
 # Part 3
 - The thing that i had found very interesting in either from week 2 or week 3 was creating a server. I have not had much experience with creating a server so this was a very cool and fun experience to see how everything is working together to make the web server.
