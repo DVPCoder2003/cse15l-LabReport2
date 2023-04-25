@@ -18,9 +18,19 @@
 
 ## **Part 2**
 ### This is the buggy code that I had chose:
-` static void reverseInPlace(int[] arr) {
+``` 
+static void reverseInPlace(int[] arr) 
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
     }
-  }`
-
+  }
+ ```
+##Here is an input that doesn’t induce a failure
+```
+@Test 
+public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+}
+```
