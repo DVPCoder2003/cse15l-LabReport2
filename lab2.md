@@ -17,7 +17,7 @@
 - Very similar to the first implementation, but it seems to add to the ArrayList as it keeps the first phrase that we had inputted in the url while inputting the phrase I just put in right under the first in a new line.
 
 ## **Part 2**
-### This is the buggy code that I had chose:
+## This is the buggy code that I had chose:
 ``` 
 static void reverseInPlace(int[] arr) 
     for(int i = 0; i < arr.length; i += 1) {
@@ -25,7 +25,7 @@ static void reverseInPlace(int[] arr)
     }
   }
  ```
-## Here is an input that does induce a failure:
+### Here is an input that does induce a failure:
 ```
 @Test 
 public void testReverseInPlace2() {
@@ -47,3 +47,20 @@ public void testReverseInPlace() {
 ```
 ### With the input that does not induce a failure, it passes through smoothly, but with the input that does, it brings up this error code on the terminal:
 ![Image](bugSymptom.png)
+
+
+## After the bug is fixed, the code should look like this:
+```
+static void reverseInPlace(int[] arr) {
+	for(int i = 0; i < arr.length/2; i += 1) {
+		int temp = arr[i];
+      		arr[i] = arr[(arr.length - i) - 1];
+      		arr[(arr.length - i) - 1] = temp;
+   	      }
+       }
+```
+- What had changed between the two codes was me adding a temporary variable to keep the first half of numbers stored somewhere when reversing the order of the array. The bug here was that it was only changing one half of the array and keeping the other the same number and order. For example, an array {1,2,3} through the method with bugs would give you {3,2,3} instead. With the new code, we make sure to only go through half of the array as we are going to change the other half already when reversing the array. Then you go through however many for loops, replacing the first with the last using the temp variable, the second with the second last etc.
+
+
+# Part 3
+- The thing that i had found very interesting in either from week 2 or week 3 was creating a server. I have not had much experience with creating a server so this was a very cool and fun experience to see how everything is working together to make the web server.
