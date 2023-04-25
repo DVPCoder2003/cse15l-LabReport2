@@ -25,6 +25,17 @@ static void reverseInPlace(int[] arr)
     }
   }
  ```
+##Here is an input that does induce a failure:
+```
+@Test 
+public void testReverseInPlace2() {
+    int[] input1 = {3, 2, 1};
+    ArrayExamples.reverseInPlace(input1);
+    System.out.println(input1);
+    assertArrayEquals(new int[]{1, 2, 3}, input1);
+	}
+```
+
 ##Here is an input that doesn’t induce a failure
 ```
 @Test 
