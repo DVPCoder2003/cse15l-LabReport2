@@ -14,7 +14,10 @@
 ### My second implementation of /add-message:
 ![Image](addMessage2.png)
 
-- Very similar to the first implementation, but it seems to add to the ArrayList as it keeps the first phrase that we had inputted in the url while inputting the phrase I just put in right under the first in a new line.
+- Like for the first implementation, the methods in StringServer.java are called again, which are the handleRequest method in the Handler class and the main method in the String Server class. Even if we add another message, the same methods would still be utilized. The main method in the StringServer class creates the server using a port number that is within the parameters. The handleRequest would 'handle' the requests that you put in the url, such as adding any word or words in our case.
+- The main relevant argument would still indeed be the url itself, containing the query that we had put for this implementation to make the changes. The relevant field is still str, but would be under the original word/phrase we had inputted as whenvever we add a word in the url, it goes in the ArrayList, and gets put on the server in a new line.
+- As seen, not too much changes except for the fact that the new word/phrase is added into the ArrayList, thus being inputted into the server on a new line.
+
 
 --- 
 ## **Part 2**
